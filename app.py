@@ -5,7 +5,7 @@
 # License -> https://github.com/FayasNoushad/Play-Store-API/blob/main/LICENSE
 
 from flask import Flask, redirect, request, jsonify, json 
-from play_scraper import *
+import play_scraper
 
 
 app = Flask(__name__)
@@ -20,7 +20,7 @@ def main():
 def app_details():
     query = request.args.get('query')
     if query is not None:
-        details = details(query)
+        details = play_scraper.details(query)
         if details is None:
             return jsonify(
                 {"error": "No details found"}
