@@ -24,13 +24,13 @@ def app_details():
         details = play_scraper.details(query)
         if details is None:
             return jsonify(
-                {"error": "No details found"}
+                {"error": f"No details found, Read the {docs}."}
             )
         if details is not None:
             return jsonify(details)
     else:
         return jsonify(
-            {"error": "Query is None"}
+            {"error": f"Query is None, Read the {docs}."}
         )
 
 
@@ -52,7 +52,7 @@ def app_collection():
         return jsonify(results)
     else:
         return jsonify(
-            {"error": "Something wrong"}
+            {"error": f"Something wrong, Read the {docs}."}
         )
 
 
