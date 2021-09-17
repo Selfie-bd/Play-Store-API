@@ -10,3 +10,14 @@ Made with Python3
 Copyright permission under MIT License
 License -> https://github.com/FayasNoushad/Play-Store-API/blob/main/LICENSE
 ```
+
+---
+
+## Deploy
+
+```sh
+git clone https://github.com/FayasNoushad/Play-Store-API/tree/main
+cd Play-Store-API
+pip3 install -r requirements.txt
+python3 app.py
+```
